@@ -9,7 +9,29 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <!-- Мобильное меню -->
+            <div class="mobile-nav">
+                <a href="index.html" class="mobile-logo">
+                    <img src="images/splash.png" alt="JellyJumper Logo">
+                </a>
+                <button class="mobile-menu-button">
+                    <span>Menu</span>
+                </button>
+                <div class="mobile-dropdown">
+                    <a href="#home">Главная</a>
+                    <a href="privacy.html">Конфиденциальность</a>
+                    <div class="mobile-lang">
+                        <a href="index.html" class="active">RU</a>
+                        <a href="en.html">EN</a>
+                    </div>
+                    <a href="#" class="mobile-store">
+                        <img src="images/app-store-en.svg" alt="Загрузить в App Store">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Десктопное меню -->
+            <ul class="desktop-nav">
                 <li class="logo">
                     <a href="index.html">
                         <img src="images/splash.png" alt="JellyJumper Logo">
@@ -46,7 +68,7 @@
                     <li>🌟 Физика движения: Почувствуйте реализм физики в каждом прыжке.</li>
                 </ul>
             </div>
-            <div class="product-showcase">
+            <div class="product-showcase" style="padding-bottom: 150px;">
                 <div class="carousel">
                     <div class="carousel-item active">
                         <img src="images/1.png" alt="Скриншот 1">
@@ -78,18 +100,36 @@
             <div class="copyright">
                 <p>&copy; 2024 JellyJumper</p>
             </div>
-            <div class="social-links">
-                <a href="https://x.com/sergievskiyks" target="_blank" class="social-link">
-                    <img src="images/x-logo.svg" alt="Twitter/X">
-                    @sergievskiyks
-                </a>
-                <a href="https://www.facebook.com/Sergievskiy" target="_blank" class="social-link">
-                    <img src="images/fb-logo.svg" alt="Facebook">
-                    @Sergievskiy
-                </a>
+            <!-- Мобильная версия контактов -->
+            <div class="mobile-contacts">
+                <button class="contacts-dropdown-button">Контакты</button>
+                <div class="contacts-dropdown">
+                    <a href="https://x.com/sergievskiyks" target="_blank">
+                        <img src="images/x-logo.svg" alt="Twitter/X">
+                        @sergievskiyks
+                    </a>
+                    <a href="https://www.facebook.com/Sergievskiy" target="_blank">
+                        <img src="images/fb-logo.svg" alt="Facebook">
+                        @Sergievskiy
+                    </a>
+                </div>
+            </div>
+            <!-- Десктопная версия контактов -->
+            <div class="desktop-social-links">
+                <div class="social-links">
+                    <a href="https://x.com/sergievskiyks" target="_blank" class="social-link">
+                        <img src="images/x-logo.svg" alt="Twitter/X">
+                        @sergievskiyks
+                    </a>
+                    <a href="https://www.facebook.com/Sergievskiy" target="_blank" class="social-link">
+                        <img src="images/fb-logo.svg" alt="Facebook">
+                        @Sergievskiy
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
     <script src="js/carousel.js"></script>
+    <script src="js/mobile-menu.js"></script>
 </body>
 </html> 
