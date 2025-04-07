@@ -51,8 +51,7 @@ footer {
     background-color: #333;
     color: white;
     padding: 1.5rem;
-    position: fixed;
-    bottom: 0;
+    position: relative;
     width: 100%;
 }
 
@@ -92,14 +91,37 @@ footer {
 }
 
 @media (max-width: 768px) {
+    footer {
+        padding: 0.5rem;
+        position: relative;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 0.25rem;
     }
 
     .social-links {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 0.25rem;
+    }
+
+    .social-link {
+        font-size: 0.7rem;
+        padding: 0.25rem;
+    }
+
+    .social-link img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .copyright {
+        font-size: 0.7rem;
+        margin: 0.25rem 0;
     }
 }
 

@@ -61,33 +61,6 @@ const templates = {
             <div class="copyright">
                 <p>&copy; 2025 JellyJumper</p>
             </div>
-            <!-- Мобильная версия контактов -->
-            <div class="mobile-contacts">
-                <button class="contacts-dropdown-button">${lang === 'ru' ? 'Контакты' : lang === 'fr' ? 'Contact' : lang === 'es' ? 'Contacto' : 'Contact'}</button>
-                <div class="contacts-dropdown">
-                    <a href="https://x.com/sergievskiyks" target="_blank">
-                        <img src="images/x-logo.svg" alt="Twitter/X">
-                        @sergievskiyks
-                    </a>
-                    <a href="https://www.facebook.com/Sergievskiy" target="_blank">
-                        <img src="images/fb-logo.svg" alt="Facebook">
-                        @Sergievskiy
-                    </a>
-                </div>
-            </div>
-            <!-- Десктопная версия контактов -->
-            <div class="desktop-social-links">
-                <div class="social-links">
-                    <a href="https://x.com/sergievskiyks" target="_blank" class="social-link">
-                        <img src="images/x-logo.svg" alt="Twitter/X">
-                        @sergievskiyks
-                    </a>
-                    <a href="https://www.facebook.com/Sergievskiy" target="_blank" class="social-link">
-                        <img src="images/fb-logo.svg" alt="Facebook">
-                        @Sergievskiy
-                    </a>
-                </div>
-            </div>
         </div>
     `
 }; 
