@@ -126,15 +126,14 @@ footer {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #f5f5f5;
-    border-radius: 8px;
-    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-item {
     display: none;
     width: 100%;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     opacity: 0;
 }
 
@@ -146,8 +145,7 @@ footer {
 .carousel-item img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 16px;
     object-fit: contain;
     max-height: 70vh;
 }
@@ -157,22 +155,26 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: white;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
     border: none;
-    padding: 1rem;
+    padding: 12px;
     cursor: pointer;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 .carousel-button:hover {
+    background: #fff;
     transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-button:active {
@@ -180,61 +182,202 @@ footer {
 }
 
 .carousel-button.prev {
-    left: 10px;
+    left: 20px;
 }
 
 .carousel-button.next {
-    right: 10px;
+    right: 20px;
+}
+
+/* Добавляем индикаторы слайдов */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carousel-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background: #fff;
+    transform: scale(1.2);
+}
+
+/* Медиа-запросы для карусели */
+@media (max-width: 768px) {
+    .carousel-button {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .carousel-button.prev {
+        left: 10px;
+    }
+
+    .carousel-button.next {
+        right: 10px;
+    }
+
+    .carousel-indicators {
+        bottom: 15px;
+    }
+
+    .carousel-indicator {
+        width: 6px;
+        height: 6px;
+    }
 }
 
 /* Обновляем стили для переключателя языков */
 .language-switch {
-    display: flex;
-    gap: 0.5rem;
-    margin-left: 1rem;
+    position: relative;
+    display: inline-block;
 }
 
-.language-switch a {
-    color: white;
-    text-decoration: none;
-    padding: 0.3rem 0.6rem;
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 4px;
-    transition: all 0.3s ease;
+.current-lang {
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.8rem;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #333;
 }
 
-.language-switch a::before {
+.current-lang:hover {
+    background: #e9ecef;
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 8px;
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+/* Создаем "мост" между кнопкой и меню */
+.language-switch::after {
     content: '';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 8px;
+    background: transparent;
 }
 
-.language-switch a[href="index.html"]::before {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6"><rect width="9" height="3" fill="white"/><rect y="3" width="9" height="3" fill="%23D52B1E"/><rect y="2" width="9" height="2" fill="%230039A6"/></svg>');
+.language-switch:hover .lang-dropdown,
+.language-switch:hover::after + .lang-dropdown {
+    display: block;
+    opacity: 1;
 }
 
-.language-switch a[href="en.html"]::before {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><clipPath id="a"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="b"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><g clip-path="url(%23a)"><path d="M0 0v30h60V0z" fill="%23012169"/><path d="M0 0l60 30m0-30L0 30" stroke="%23fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(%23b)" stroke="%23C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="%23fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="%23C8102E" stroke-width="6"/></g></svg>');
+.lang-dropdown a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-.language-switch a.active {
-    background: rgba(255,255,255,0.1);
-    border-color: rgba(255,255,255,0.8);
-    font-weight: bold;
+.lang-dropdown a:hover {
+    background: #e9ecef;
 }
 
-.language-switch a:hover {
-    background: rgba(255,255,255,0.2);
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.lang-dropdown a.active {
+    background: #e9ecef;
+    font-weight: 500;
+}
+
+/* Мобильная версия выпадающего меню языков */
+.mobile-lang-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.mobile-lang-dropdown a {
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.mobile-lang-dropdown a:hover {
+    background: #e9ecef;
+}
+
+.mobile-lang-dropdown a.active {
+    background: #e9ecef;
+    font-weight: 500;
+}
+
+/* Мобильная версия */
+.mobile-lang {
+    display: none;
+}
+
+.mobile-lang-dropdown {
+    display: none;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+}
+
+.mobile-lang-dropdown a {
+    display: block;
+    padding: 8px 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.mobile-lang-dropdown a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .language-switch {
+        display: none;
+    }
+    
+    .mobile-lang {
+        display: block;
+    }
+    
+    .mobile-lang-dropdown {
+        display: block;
+    }
 }
 
 /* Стили для описания продукта */
@@ -418,14 +561,16 @@ footer {
     transform: scale(1.05);
 }
 
-/* Мобильная навигация */
+/* Мобильное меню */
 .mobile-nav {
     display: none;
+    position: relative;
+    padding: 15px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
-    position: relative;
-    width: 100%;
 }
 
 .mobile-logo img {
@@ -435,138 +580,133 @@ footer {
 
 .mobile-menu-button {
     background: none;
-    border: 1px solid rgba(255,255,255,0.5);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border: none;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 10px;
+    color: #333;
+    z-index: 1001;
 }
 
 .mobile-dropdown {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 70px;
     left: 0;
     right: 0;
-    background: #333;
-    padding: 1rem;
-    flex-direction: column;
-    gap: 1rem;
+    bottom: 0;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100%;
+    overflow-y: auto;
 }
 
 .mobile-dropdown.active {
-    display: flex;
+    display: block;
 }
 
 .mobile-dropdown a {
-    color: white;
+    display: block;
+    padding: 10px 0;
+    color: #333;
     text-decoration: none;
-    padding: 0.5rem;
-    text-align: center;
+    border-bottom: 1px solid #eee;
 }
 
-.mobile-lang {
+.mobile-dropdown a:last-child {
+    border-bottom: none;
+}
+
+.mobile-lang-dropdown {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
 }
 
-.mobile-store img {
-    height: 36px;
+.mobile-lang-dropdown a {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: #f5f5f5;
 }
 
-/* Мобильные контакты в футере */
+.mobile-lang-dropdown a.active {
+    background: #007AFF;
+    color: #fff;
+}
+
+/* Мобильные контакты */
 .mobile-contacts {
-    display: none;
     position: relative;
+    margin-top: 20px;
 }
 
 .contacts-dropdown-button {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    background: none;
+    border: none;
+    font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-}
-
-.contacts-dropdown-button:hover {
-    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    color: #333;
 }
 
 .contacts-dropdown {
     display: none;
     position: absolute;
-    bottom: calc(100% + 10px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: #444;
-    padding: 0;
-    flex-direction: column;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     min-width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-    overflow: hidden;
 }
 
 .contacts-dropdown.active {
-    display: flex;
+    display: block;
 }
 
 .contacts-dropdown a {
-    color: white;
-    text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    padding: 0.8rem 1rem;
-    transition: background-color 0.3s ease;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    gap: 10px;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
 }
 
 .contacts-dropdown a:last-child {
     border-bottom: none;
 }
 
-.contacts-dropdown a:hover {
-    background: rgba(255,255,255,0.1);
-}
-
 .contacts-dropdown img {
     width: 20px;
     height: 20px;
-    opacity: 0.8;
 }
 
 /* Медиа-запросы */
 @media (max-width: 768px) {
-    .desktop-nav,
-    .desktop-social-links {
+    .mobile-nav {
+        display: flex;
+    }
+
+    .desktop-nav {
         display: none;
     }
 
-    .mobile-nav {
-        display: flex;
+    .mobile-logo img {
+        height: 40px;
     }
 
     .mobile-contacts {
         display: block;
     }
 
-    footer .footer-content {
-        justify-content: space-between;
-        padding: 0.8rem 1rem;
-        align-items: center;
-    }
-
-    .copyright {
-        font-size: 0.9rem;
-        opacity: 0.8;
+    .desktop-social-links {
+        display: none;
     }
 }
 

@@ -1,36 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
     const items = carousel.querySelectorAll('.carousel-item');
-    const prevButton = carousel.querySelector('.prev');
-    const nextButton = carousel.querySelector('.next');
+    const prevButton = carousel.querySelector('.carousel-button.prev');
+    const nextButton = carousel.querySelector('.carousel-button.next');
+    const indicators = carousel.querySelectorAll('.carousel-indicator');
     let currentIndex = 0;
     let autoPlayInterval;
 
-    function showSlide(index) {
-        items.forEach(item => {
-            item.classList.remove('active');
-            item.style.opacity = '0';
+    function updateCarousel() {
+        items.forEach((item, index) => {
+            item.classList.toggle('active', index === currentIndex);
         });
-        
-        if (index >= items.length) {
-            currentIndex = 0;
-        } else if (index < 0) {
-            currentIndex = items.length - 1;
-        } else {
-            currentIndex = index;
-        }
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentIndex);
+        });
+    }
 
-        const activeItem = items[currentIndex];
-        activeItem.classList.add('active');
-        // Небольшая задержка для плавности анимации
-        setTimeout(() => {
-            activeItem.style.opacity = '1';
-        }, 50);
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateCarousel();
     }
 
     function startAutoPlay() {
         autoPlayInterval = setInterval(() => {
-            showSlide(currentIndex + 1);
+            nextSlide();
         }, 10000); // Переключение каждые 10 секунд
     }
 
@@ -38,16 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
         clearInterval(autoPlayInterval);
     }
 
-    prevButton.addEventListener('click', () => {
-        showSlide(currentIndex - 1);
-        stopAutoPlay();
-        startAutoPlay(); // Перезапускаем автопроигрывание
-    });
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
 
-    nextButton.addEventListener('click', () => {
-        showSlide(currentIndex + 1);
-        stopAutoPlay();
-        startAutoPlay(); // Перезапускаем автопроигрывание
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
     });
 
     // Останавливаем автопроигрывание при наведении на карусель
