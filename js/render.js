@@ -1,7 +1,21 @@
 // Функция для определения языка страницы
 function getPageLanguage() {
     const htmlLang = document.documentElement.lang;
+    
+    // Особая обработка для китайского языка
+    if (htmlLang === 'zh-CN') return 'zh';
+    
     return htmlLang || 'en';
+}
+
+// Determine language from filename
+function getLanguage() {
+    const path = window.location.pathname;
+    if (path.includes('ru.html')) return 'ru';
+    if (path.includes('fr.html')) return 'fr';
+    if (path.includes('es.html')) return 'es';
+    if (path.includes('zh.html')) return 'zh';
+    return 'en';
 }
 
 // Функция для рендеринга контента
@@ -31,7 +45,9 @@ function renderContent() {
         featuresTitle.textContent = lang === 'ru' ? 'Особенности игры:' :
                                   lang === 'en' ? 'Game Features:' :
                                   lang === 'fr' ? 'Caractéristiques du jeu :' :
-                                  'Características del juego:';
+                                  lang === 'es' ? 'Características del juego:' :
+                                  lang === 'zh' ? '游戏特点:' :
+                                  'Game Features:';
     }
     
     // Обновляем alt-тексты для изображений
@@ -40,7 +56,9 @@ function renderContent() {
         img.alt = lang === 'ru' ? `Скриншот ${index + 1}` :
                   lang === 'en' ? `Screenshot ${index + 1}` :
                   lang === 'fr' ? `Capture d'écran ${index + 1}` :
-                  `Captura de pantalla ${index + 1}`;
+                  lang === 'es' ? `Captura de pantalla ${index + 1}` :
+                  lang === 'zh' ? `游戏截图 ${index + 1}` :
+                  `Screenshot ${index + 1}`;
     });
     
     // Обновляем текст кнопки меню в мобильной версии
@@ -49,7 +67,9 @@ function renderContent() {
         menuButton.textContent = lang === 'ru' ? 'Меню' :
                                 lang === 'en' ? 'Menu' :
                                 lang === 'fr' ? 'Menu' :
-                                'Menú';
+                                lang === 'es' ? 'Menú' :
+                                lang === 'zh' ? '菜单' :
+                                'Menu';
     }
 }
 
