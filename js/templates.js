@@ -50,7 +50,7 @@ const templates = {
                     </div>
                 </li>
                 <li class="app-store-button">
-                    <a href="https://apps.apple.com/cz/app/jellyjumper-infinite-jumps/id6670177375" class="download-button">
+                    <a href="https://apps.apple.com/app/apple-store/id6670177375?pt=127292670&ct=jellyjumper.net&mt=8" class="download-button">
                         <img src="images/app-store-en.svg" alt="${lang === 'ru' ? 'Загрузить в App Store' : lang === 'fr' ? 'Télécharger sur l\'App Store' : lang === 'es' ? 'Descargar en App Store' : lang === 'zh' ? '从App Store下载' : 'Download on the App Store'}">
                     </a>
                 </li>
