@@ -1,6 +1,6 @@
 const content = {
     ru: {
-        title: 'JellyJumper: Бесконечные Прыжки',
+        title: 'Jelly Jumper: Бесконечные Прыжки',
         intro: 'Приготовьтесь к бесконечному приключению, где точность, ловкость и меткость - ключ к успеху. Возьмите под контроль Jelly, отскакивающего и очаровательного героя, и прыгайте до головокружительных высот в этом захватывающем платформере!',
         featuresTitle: 'Особенности игры:',
         features: [
@@ -18,7 +18,7 @@ const content = {
         }
     },
     en: {
-        title: 'JellyJumper: Infinite Jumps',
+        title: 'Jelly Jumper: Infinite Jumps',
         intro: 'Get ready to dive into an endless adventure where precision, skill, and accuracy are the keys to success. Take control of Jelly, a bouncy and adorable hero, and jump to dizzying heights in this exciting platformer!',
         featuresTitle: 'Game Features:',
         features: [
@@ -36,7 +36,7 @@ const content = {
         }
     },
     fr: {
-        title: 'JellyJumper: Sauts Infinis',
+        title: 'Jelly Jumper: Sauts Infinis',
         intro: 'Préparez-vous à plonger dans une aventure sans fin où la précision, l\'habileté et la justesse sont les clés du succès. Prenez le contrôle de Jelly, un héros rebondissant et adorable, et sautez jusqu\'aux sommets vertigineux dans ce jeu de plateforme palpitant !',
         featuresTitle: 'Caractéristiques du jeu:',
         features: [
@@ -54,7 +54,7 @@ const content = {
         }
     },
     es: {
-        title: 'JellyJumper: Saltos Infinitos',
+        title: 'Jelly Jumper: Saltos Infinitos',
         intro: 'Prepárate para sumergirte en una aventura sin fin, donde la precisión, la habilidad y la puntería son la clave del éxito. Toma el control de Jelly, un héroe elástico y adorable, ¡y salta hasta lo más alto en este emocionante juego de plataformas!',
         featuresTitle: 'Características del juego:',
         features: [
@@ -72,7 +72,7 @@ const content = {
         }
     },
     zh: {
-        title: 'JellyJumper: 无尽跳跃',
+        title: 'Jelly Jumper: 无尽跳跃',
         intro: '准备好投入一场无尽冒险，在这里精确度、技巧和准确性是成功的关键。控制弹性十足且可爱的果冻英雄Jelly，在这款刺激的平台游戏中跳跃到令人眩晕的高度！',
         featuresTitle: '游戏特点:',
         features: [
