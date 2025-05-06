@@ -15,6 +15,7 @@ function getLanguage() {
     if (path.includes('fr.html')) return 'fr';
     if (path.includes('es.html')) return 'es';
     if (path.includes('zh.html')) return 'zh';
+    if (path.includes('pt.html')) return 'pt';
     return 'en';
 }
 
@@ -47,6 +48,7 @@ function renderContent() {
                                   lang === 'fr' ? 'Caractéristiques du jeu :' :
                                   lang === 'es' ? 'Características del juego:' :
                                   lang === 'zh' ? '游戏特点:' :
+                                  lang === 'pt' ? 'Características do jogo:' :
                                   'Game Features:';
     }
     
@@ -58,6 +60,7 @@ function renderContent() {
                   lang === 'fr' ? `Capture d'écran ${index + 1}` :
                   lang === 'es' ? `Captura de pantalla ${index + 1}` :
                   lang === 'zh' ? `游戏截图 ${index + 1}` :
+                  lang === 'pt' ? `Captura de tela ${index + 1}` :
                   `Screenshot ${index + 1}`;
     });
     
@@ -69,6 +72,7 @@ function renderContent() {
                                 lang === 'fr' ? 'Menu' :
                                 lang === 'es' ? 'Menú' :
                                 lang === 'zh' ? '菜单' :
+                                lang === 'pt' ? 'Menu' :
                                 'Menu';
     }
 }

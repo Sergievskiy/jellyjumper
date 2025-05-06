@@ -88,5 +88,23 @@ const content = {
             privacy: '隐私政策',
             contact: '联系我们'
         }
+    },
+    pt: {
+        title: 'Jelly Jumper: Saltos Infinitos',
+        intro: 'Prepare-se para mergulhar em uma aventura sem fim, onde precisão, habilidade e pontaria são as chaves para o sucesso. Assuma o controle do Jelly, um herói saltitante e adorável, e salte para alturas vertiginosas neste emocionante jogo de plataforma!',
+        featuresTitle: 'Características do jogo:',
+        features: [
+            '🌟 Controles de toque simples: puxe, mire e solte para lançar o Jelly de uma plataforma para outra.',
+            '🌟 Jogabilidade infinita: salte sem parar de plataforma em plataforma.',
+            '🌟 Disposição dinâmica de plataformas: nenhum jogo é igual ao outro!',
+            '🌟 Diversão viciante: sessões rápidas que farão você voltar por mais.',
+            '🌟 Modo retrato: projetado exclusivamente para orientação vertical.',
+            '🌟 Movimento baseado em física: sinta a física real do jogo.'
+        ],
+        nav: {
+            home: 'Início',
+            privacy: 'Privacidade',
+            contact: 'Contato'
+        }
     }
 }; 

@@ -12,6 +12,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.jellyjumper.net/fr.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.jellyjumper.net/es.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.jellyjumper.net/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.jellyjumper.net/pt.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jellyjumper.net/index.html"/>
   </url>
   
@@ -26,6 +27,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.jellyjumper.net/fr.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.jellyjumper.net/es.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.jellyjumper.net/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.jellyjumper.net/pt.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jellyjumper.net/index.html"/>
   </url>
   
@@ -40,6 +42,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.jellyjumper.com/fr.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.jellyjumper.com/es.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.jellyjumper.com/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.jellyjumper.com/pt.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jellyjumper.com/index.html"/>
   </url>
   
@@ -54,6 +57,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.jellyjumper.com/fr.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.jellyjumper.com/es.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.jellyjumper.com/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.jellyjumper.com/pt.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jellyjumper.com/index.html"/>
   </url>
   
@@ -68,6 +72,22 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.jellyjumper.com/fr.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.jellyjumper.com/es.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.jellyjumper.com/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.jellyjumper.com/pt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jellyjumper.com/index.html"/>
+  </url>
+  
+  <!-- Португальская версия -->
+  <url>
+    <loc>https://jellyjumper.com/pt.html</loc>
+    <lastmod>2023-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jellyjumper.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.jellyjumper.com/ru.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jellyjumper.com/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jellyjumper.com/es.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.jellyjumper.com/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.jellyjumper.com/pt.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jellyjumper.com/index.html"/>
   </url>
   
