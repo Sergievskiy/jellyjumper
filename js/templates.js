@@ -21,7 +21,7 @@ const templates = {
                         <a href="pt.html" ${lang === 'pt' ? 'class="active"' : ''}>PT</a>
                         <a href="hi.html" ${lang === 'hi' ? 'class="active"' : ''}>HI</a>
                     </div>
-                    <a href="https://apps.apple.com/cz/app/jellyjumper-infinite-jumps/id6670177375" class="mobile-store">
+                    <a href="https://apps.apple.com/cz/app/jellyjumper-infinite-jumps/id6670177375" class="mobile-store" onclick="gtag('event', 'app_store_download', {'event_category': 'engagement', 'event_label': 'mobile_menu'});">
                         <img src="images/app-store-en.svg" alt="${lang === 'ru' ? 'Загрузить в App Store' : lang === 'fr' ? 'Télécharger sur l\'App Store' : lang === 'es' ? 'Descargar en App Store' : lang === 'zh' ? '从App Store下载' : lang === 'pt' ? 'Baixar na App Store' : lang === 'hi' ? 'App Store से डाउनलोड करें' : 'Download on the App Store'}">
                     </a>
                 </div>
@@ -54,7 +54,7 @@ const templates = {
                     </div>
                 </li>
                 <li class="app-store-button">
-                    <a href="https://apps.apple.com/app/apple-store/id6670177375?pt=127292670&ct=jellyjumper.net&mt=8" class="download-button">
+                    <a href="https://apps.apple.com/app/apple-store/id6670177375?pt=127292670&ct=jellyjumper.net&mt=8" class="download-button" onclick="gtag('event', 'app_store_download', {'event_category': 'engagement', 'event_label': 'desktop_menu'});">
                         <img src="images/app-store-en.svg" alt="${lang === 'ru' ? 'Загрузить в App Store' : lang === 'fr' ? 'Télécharger sur l\'App Store' : lang === 'es' ? 'Descargar en App Store' : lang === 'zh' ? '从App Store下载' : lang === 'pt' ? 'Baixar na App Store' : lang === 'hi' ? 'App Store से डाउनलोड करें' : 'Download on the App Store'}">
                     </a>
                 </li>
