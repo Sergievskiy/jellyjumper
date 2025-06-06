@@ -16,6 +16,7 @@ function getLanguage() {
     if (path.includes('es.html')) return 'es';
     if (path.includes('zh.html')) return 'zh';
     if (path.includes('pt.html')) return 'pt';
+    if (path.includes('hi.html')) return 'hi';
     return 'en';
 }
 
@@ -49,6 +50,7 @@ function renderContent() {
                                   lang === 'es' ? 'Características del juego:' :
                                   lang === 'zh' ? '游戏特点:' :
                                   lang === 'pt' ? 'Características do jogo:' :
+                                  lang === 'hi' ? 'गेम की विशेषताएं:' :
                                   'Game Features:';
     }
     
@@ -61,6 +63,7 @@ function renderContent() {
                   lang === 'es' ? `Captura de pantalla ${index + 1}` :
                   lang === 'zh' ? `游戏截图 ${index + 1}` :
                   lang === 'pt' ? `Captura de tela ${index + 1}` :
+                  lang === 'hi' ? `स्क्रीनशॉट ${index + 1}` :
                   `Screenshot ${index + 1}`;
     });
     
@@ -73,6 +76,7 @@ function renderContent() {
                                 lang === 'es' ? 'Menú' :
                                 lang === 'zh' ? '菜单' :
                                 lang === 'pt' ? 'Menu' :
+                                lang === 'hi' ? 'मेनू' :
                                 'Menu';
     }
 }
