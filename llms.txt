@@ -1,0 +1,96 @@
+# Jelly Jumper: Infinite Jumps - Project Description for AI
+
+## Brief Description
+Jelly Jumper: Infinite Jumps is a mobile platformer game with infinite jumping mechanics, where the player controls a character named Jelly who must jump between platforms, climbing higher and higher.
+
+## Core Game Concept
+- **Genre**: Platformer with arcade elements
+- **Mechanics**: Physics-based jumping between platforms
+- **Objective**: Climb as high as possible without falling
+- **Character**: Jelly - a bouncy jelly-like hero
+
+## Gameplay
+- **Controls**: Simple touch controls - pull, aim, and release
+- **Physics**: Realistic physics-based movement and bouncing
+- **Platforms**: Dynamically generated platforms (each game is unique)
+- **Mode**: Endless gameplay with no final goal
+- **Orientation**: Portrait mode only
+
+## Technical Stack
+
+### Game Development
+- **Language**: Swift 5.0+
+- **Frameworks**: 
+  - SpriteKit (2D game engine)
+  - SwiftUI (User Interface)
+  - GameKit (Game Center integration)
+- **Platform**: iOS (iPhone/iPad)
+- **Minimum iOS Version**: iOS 15.0+
+- **Architecture**: MVVM with SwiftUI
+
+### Marketing Website
+- **Frontend**: Vanilla JavaScript + HTML5 + CSS3
+- **Type**: Static website / Landing page
+- **Localization**: Multi-language support (7 languages)
+
+### Key Features
+1. **Physics-Based Movement**: Real physics simulation using SpriteKit
+2. **Dynamic Platform Generation**: Procedural platform placement
+3. **Touch Controls**: Intuitive pull-and-release mechanics
+4. **Game Center Integration**: Leaderboards and achievements
+5. **Portrait Orientation**: Optimized for vertical gameplay
+6. **Universal App**: Supports both iPhone and iPad
+
+## Platform Support
+- **iPhone**: All models from iPhone 8 and newer
+- **iPad**: All models from iPad Mini 6 and newer
+- **iOS Version**: iOS 15.0 and later
+- **App Store**: Available on iOS App Store
+
+## Content and Localization
+Website content is stored in `js/data.js` with support for:
+- Russian (ru)
+- English (en)
+- French (fr)
+- Spanish (es)
+- Chinese (zh)
+- Portuguese (pt)
+- Hindi (hi)
+
+## Marketing and Distribution
+- **Platform**: iOS App Store
+- **Price**: Free to play
+- **Tracking**: No Tracking
+- **Official Website**: https://www.jellyjumper.net/
+- **Release Date**: January 30, 2025
+
+## Key Game Features
+🌟 Simple touch controls
+🌟 Endless gameplay
+🌟 Dynamic platform arrangement
+🌟 Addictive gameplay sessions
+🌟 Portrait mode gaming
+🌟 Physics-based movement
+
+## Target Audience
+- Mobile game enthusiasts
+- Platformer game fans
+- Casual game players
+- Arcade game lovers with simple controls
+
+## Technical Information for Developers
+
+### Game Development
+- **Application Type**: Native iOS game
+- **Game Engine**: SpriteKit
+- **UI Framework**: SwiftUI
+- **Programming Language**: Swift
+- **Architecture**: Component-based with MVVM pattern
+- **Performance**: Optimized for 60fps on all supported devices
+
+### Development Tools
+- **IDE**: Xcode 12.0+
+- **Build System**: Swift Package Manager
+- **Testing**: XCTest framework
+- **Analytics**: Game Center
+- **Version Control**: Git
