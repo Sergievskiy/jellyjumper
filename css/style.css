@@ -474,6 +474,46 @@ footer {
     filter: brightness(1.1);
 }
 
+/* Стили для кнопки скачивания в основном контенте */
+.main-download-section {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #007AFF 0%, #0056CC 100%);
+    border-radius: 12px;
+    padding: 12px 24px;
+    box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.main-download-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 122, 255, 0.4);
+    background: linear-gradient(135deg, #0056CC 0%, #003D99 100%);
+}
+
+.main-download-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+}
+
+.main-download-button img {
+    height: 48px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
 /* Обновляем медиа-запросы */
 @media (max-width: 768px) {
     nav ul {
@@ -508,6 +548,20 @@ footer {
     }
 
     .app-store-button img {
+        height: 40px;
+    }
+
+    /* Адаптивные стили для кнопки скачивания в основном контенте */
+    .main-download-section {
+        margin: 1.5rem 0;
+    }
+
+    .main-download-button {
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .main-download-button img {
         height: 40px;
     }
 

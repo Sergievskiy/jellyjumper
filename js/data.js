@@ -15,7 +15,8 @@ const content = {
             home: 'Главная',
             privacy: 'Конфиденциальность',
             contact: 'Контакты'
-        }
+        },
+        downloadButton: 'Загрузить в App Store'
     },
     en: {
         title: 'Jelly Jumper: Infinite Jumps',
@@ -33,7 +34,8 @@ const content = {
             home: 'Home',
             privacy: 'Privacy',
             contact: 'Contact'
-        }
+        },
+        downloadButton: 'Download on the App Store'
     },
     fr: {
         title: 'Jelly Jumper: Sauts Infinis',
@@ -51,7 +53,8 @@ const content = {
             home: 'Accueil',
             privacy: 'Confidentialité',
             contact: 'Contact'
-        }
+        },
+        downloadButton: 'Télécharger sur l\'App Store'
     },
     es: {
         title: 'Jelly Jumper: Saltos Infinitos',
@@ -69,7 +72,8 @@ const content = {
             home: 'Inicio',
             privacy: 'Privacidad',
             contact: 'Contacto'
-        }
+        },
+        downloadButton: 'Descargar en App Store'
     },
     zh: {
         title: 'Jelly Jumper: 无尽跳跃',
@@ -87,7 +91,8 @@ const content = {
             home: '首页',
             privacy: '隐私政策',
             contact: '联系我们'
-        }
+        },
+        downloadButton: '从App Store下载'
     },
     pt: {
         title: 'Jelly Jumper: Saltos Infinitos',
@@ -105,7 +110,8 @@ const content = {
             home: 'Início',
             privacy: 'Privacidade',
             contact: 'Contato'
-        }
+        },
+        downloadButton: 'Baixar na App Store'
     },
     hi: {
         title: 'Jelly Jumper: अनंत छलांग',
@@ -123,6 +129,7 @@ const content = {
             home: 'होम',
             privacy: 'गोपनीयता',
             contact: 'संपर्क'
-        }
+        },
+        downloadButton: 'App Store से डाउनलोड करें'
     }
 }; 

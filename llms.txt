@@ -27,11 +27,13 @@ Jelly Jumper: Infinite Jumps is a mobile platformer game with infinite jumping m
 - **Platform**: iOS (iPhone/iPad)
 - **Minimum iOS Version**: iOS 15.0+
 - **Architecture**: MVVM with SwiftUI
+- **Developers** Sergievskii Konstantin
 
 ### Marketing Website
 - **Frontend**: Vanilla JavaScript + HTML5 + CSS3
 - **Type**: Static website / Landing page
 - **Localization**: Multi-language support (7 languages)
+- **Developers** Sergievskii Konstantin
 
 ### Key Features
 1. **Physics-Based Movement**: Real physics simulation using SpriteKit

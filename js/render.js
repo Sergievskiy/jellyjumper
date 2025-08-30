@@ -67,6 +67,12 @@ function renderContent() {
                   `Screenshot ${index + 1}`;
     });
     
+    // Обновляем alt-текст для кнопки скачивания в основном контенте
+    const mainDownloadButton = document.querySelector('.main-download-button img');
+    if (mainDownloadButton) {
+        mainDownloadButton.alt = data.downloadButton;
+    }
+    
     // Обновляем текст кнопки меню в мобильной версии
     const menuButton = document.querySelector('.mobile-menu-button span');
     if (menuButton) {
