@@ -486,31 +486,29 @@ footer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #007AFF 0%, #0056CC 100%);
+    background: transparent;
     border-radius: 12px;
-    padding: 12px 24px;
-    box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
+    padding: 8px 16px;
     transition: all 0.3s ease;
     text-decoration: none;
     border: none;
     cursor: pointer;
+    outline: none;
 }
 
 .main-download-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(0, 122, 255, 0.4);
-    background: linear-gradient(135deg, #0056CC 0%, #003D99 100%);
+    background: rgba(0, 122, 255, 0.1);
 }
 
 .main-download-button:active {
     transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+    background: rgba(0, 122, 255, 0.2);
 }
 
 .main-download-button img {
     height: 48px;
     width: auto;
-    filter: brightness(0) invert(1);
     transition: all 0.3s ease;
 }
 
@@ -557,7 +555,7 @@ footer {
     }
 
     .main-download-button {
-        padding: 10px 20px;
+        padding: 6px 12px;
         border-radius: 10px;
     }
 
